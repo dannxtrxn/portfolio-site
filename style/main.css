@@ -1,0 +1,59 @@
+a:link, a:visited {
+background-color: rgb(230, 14, 57);
+color: black;
+padding: 14px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+
+a:hover, a:active {
+    background-color:rgb(233, 121, 143)
+}
+
+.header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px;}
+
+    body{
+        font-family: 'Passion One', sans-serif;}
+
+          #welcometext{
+            font-size: 20px;
+            padding: 1px;
+            border: rgb(204, 204, 204) solid ;
+            background-color: #DCDCDC;
+            border-radius: 15px;
+            width:55% ;
+            float: inline-end;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+            #row1{
+                width: 100%;
+                display: flex;}
+
+            #row2{
+                width: 100%;
+                margin-top: 45px;
+                margin-left: 2px;}
+
+  #thebros{
+      float: left;
+  }
+
+  #welcometext2{
+    font-size: 20px;
+    padding: 1px;
+    border: rgb(204, 204, 204) solid ;
+    background-color: #DCDCDC;
+    border-radius: 15px;
+    width:55% ;
+    float: right;
+    margin-right: 20px;}
+
+  
