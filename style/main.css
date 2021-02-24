@@ -63,3 +63,27 @@ a:hover, a:active {
     margin-left: 20px;
     margin-bottom: 20px;
   }
+
+  ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(53, 42, 42);
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: rgb(235, 168, 168);
+  }
