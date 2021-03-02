@@ -59,9 +59,9 @@ a:hover, a:active {
   #dbs{
     float: right;
     margin-right: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
   }
 
   ul {
@@ -86,4 +86,83 @@ a:hover, a:active {
   
   li a:hover {
     background-color: rgb(235, 168, 168);
+  }
+
+  #welcometext3{
+    font-size: 20px;
+    padding: 1px;
+    border: rgb(204, 204, 204) solid ;
+    background-color: #DCDCDC;
+    border-radius: 15px;
+    width:55% ;
+    float: left; 
+    margin-right: 20px;
+    margin-top: 50px;
+  }
+  
+  #page2-1{
+    font-size: 20px;
+    padding: 1px;
+    border: rgb(204, 204, 204) solid ;
+    background-color: #DCDCDC;
+    border-radius: 15px;
+    width:55% ;
+    float: right; 
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+
+  #page2-2{
+    font-size: 20px;
+    padding: 1px;
+    border: rgb(204, 204, 204) solid ;
+    background-color: #DCDCDC;
+    border-radius: 15px;
+    width:55% ;
+    float: left; 
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+
+  #page2-3{
+    font-size: 20px;
+    padding: 1px;
+    border: rgb(204, 204, 204) solid ;
+    background-color: #DCDCDC;
+    border-radius: 15px;
+    width:55% ;
+    float: right; 
+    margin-right: 50px;
+    margin-top: 50px;
+  }
+
+  #ps{
+    float: left;
+    margin-top: 25px;
+    margin-left: 50px;
+  }
+
+  #pp{
+    float: right;
+    margin-top: 25px;
+    margin-right: 60px;
+  }
+
+  #spotify{
+    float: right;
+    margin-top: 450px;
+    margin-right: 20px; 
+  }
+
+  #spotify2{
+    float: right;
+    margin-top: 450px;
+    margin-right: 30px; 
+  }
+
+  #future{
+    float: left;
+    margin-top: 25px;
+    margin-right: 60px;
+    margin-left: 30px;
   }
