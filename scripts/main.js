@@ -6,7 +6,7 @@ function welcome(){
     document.getElementById("saywelcome").innerHTML = message; 
 }​​
 
-functions lights(){
+function lights(){
 
     let color = prompt("What color is the light now");
 
