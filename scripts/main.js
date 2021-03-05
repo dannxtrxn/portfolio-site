@@ -9,3 +9,7 @@ function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
  }
+
+ function comingsoon() {
+    alert("This Assignment Will Be Coming Soon");}
+

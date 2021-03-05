@@ -65,13 +65,14 @@ a:hover, a:active {
   ul {
     list-style-type: none;
     margin: auto;
-    padding: 0;
+    padding: 5px;
     overflow: hidden;
     background-color: rgb(53, 42, 42);
   }
 
   li {
     float: left;
+    margin-right: auto;
   }
 
   li a {
@@ -199,3 +200,25 @@ a:hover, a:active {
   float: inline-end;
 }
 
+.button {
+    background-color: #f86565; 
+    border: none;
+    color: rgb(68, 68, 68);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+    border-radius: 30px; 
+    display: inline-block;
+}
+
+.box {
+  display:inline-block;
+  width:15%;
+  height:auto;
+  text-align: center;
+  vertical-align: top;
+  padding: 2%;
+}
