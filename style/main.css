@@ -203,16 +203,18 @@ a:hover, a:active {
 .button {
     background-color: #f86565; 
     border: none;
-    color: rgb(68, 68, 68);
+    color: rgb(0, 0, 0);
     padding: 20px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     margin: 4px 4px;
     cursor: pointer;
-    border-radius: 30px; 
+    border-radius: 15px; 
     display: inline-block;
-}
+    font-style: normal;
+    }
+
 
 .box {
   display:inline-block;
@@ -220,5 +222,5 @@ a:hover, a:active {
   height:auto;
   text-align: center;
   vertical-align: top;
-  padding: 2%;
+  padding: 1%;
 }
