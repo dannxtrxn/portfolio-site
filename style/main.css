@@ -1,3 +1,4 @@
+/*nav bar settings*/
 a:link, a:visited {
 background-color: rgb(230, 14, 57);
 color: black;
@@ -6,48 +7,41 @@ text-align: center;
 text-decoration: none;
 display: inline-block;
 }
-
+/*nav bar select/hover*/
 a:hover, a:active {
     background-color:rgb(233, 121, 143)
 }
-
+/*headers*/
 .header {
     background-color: #ffffff;
     text-align: center;
     padding: 20px;}
-
+/*font*/
     body{
       font-family: 'RocknRoll One', sans-serif;}
 
-          #welcometext{
-            font-size: 18px;
-            padding: 1px;
-            border: rgb(204, 204, 204) solid ;
-            background-color: #DCDCDC;
-            border-radius: 15px;
-            width:55% ;
-            float: inline-end;
-            margin-right: 20px;
-            margin-top: 20px;
-            margin-left: 20px;
-            margin-bottom: 20px;
+      /*index paragraph1*/
+    #welcometext{
+        font-size: 18px;
+        padding: 1px;
+        border: rgb(204, 204, 204) solid ;
+        background-color: #DCDCDC;
+        border-radius: 15px;
+        width:55% ;
+        float: inline-end;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-bottom: 20px;
         }
 
-            #row1{
-                width: 100%;
-                display: flex;}
-
-            #row2{
-                width: 100%;
-                margin-top: 45px;
-                margin-left: 2px;}
-
+/*pictures with frineds*/
   #thebros{
       float: left;
       margin-left: 70px;
       margin-top: 30px;
   }
-
+/*index paragraph2*/
   #welcometext2{
     font-size: 18px;
     padding: 1px;
@@ -60,8 +54,7 @@ a:hover, a:active {
   margin-top: 160px;
   }
 
-
-
+/*navbar*/
   ul {
     list-style-type: none;
     margin: auto;
@@ -70,11 +63,13 @@ a:hover, a:active {
     background-color: rgb(53, 42, 42);
   }
 
+  /*links in my navbar*/
   li {
     float: left;
     margin-right: auto;
   }
 
+  /*links in my navbar*/
   li a {
     display: block;
     color: white;
@@ -82,11 +77,13 @@ a:hover, a:active {
     padding: 14px 16px;
     text-decoration: none;
   }
-  
+
+  /*links in my navbar*/
   li a:hover {
     background-color: rgb(235, 168, 168);
   }
 
+  /*index paragraph3*/
   #welcometext3{
     font-size: 18px;
     padding: 1px;
@@ -100,6 +97,7 @@ a:hover, a:active {
     margin-left: 60px;
   }
   
+  /*experience page1*/
   #page2-1{
     font-size: 18px;
     padding: 1px;
@@ -112,6 +110,7 @@ a:hover, a:active {
     margin-top: 50px;
   }
 
+  /*experience page2*/
   #page2-2{
     font-size: 18px;
     padding: 1px;
@@ -125,6 +124,7 @@ a:hover, a:active {
     margin-left: 10px;
   }
 
+  /*experience page3*/
   #page2-3{
     font-size: 18px;
     padding: 1px;
@@ -137,38 +137,41 @@ a:hover, a:active {
     margin-top: 50px;
   }
 
+  /*photoshop picture*/
   #ps{
     float: left;
     margin-top: 25px;
     margin-left: 70px;
   }
 
+  /*premierepro picture*/
   #pp{
     float: right;
     margin-top: 35px;
     margin-right: 150px;
     
   }
-
+/*my spotify playlist1*/
   #spotify{
     float: right;
     margin-top: 250px;
     margin-right: 20px; 
   }
 
+/*my spotify playlist2*/
   #spotify2{
     float: right;
     margin-top: 250px;
     margin-right: 30px; 
   }
-
+/*future picture*/
   #future{
     float: left;
     margin-top: 25px;
     margin-right: 60px;
     margin-left: 75px;
   }
-
+/*darkmode*/
   .dark-mode {
     background-color: black;
     color: white;
@@ -181,6 +184,7 @@ a:hover, a:active {
     font-size: 20px;
   }
 
+  /*caption for pictures*/
   figcaption {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -190,17 +194,19 @@ a:hover, a:active {
     font-size: 9px;
   }
 
+/*caption for pictures*/
     figure {
-  border: 1px #cccccc solid;
-  padding: 4px;
-  margin: auto;
+      border: 1px #cccccc solid;
+      padding: 4px;
+      margin: auto;
 }
 
 #assignment{
   float: inline-end;
 }
 
-.button {
+/*colour of button*/
+  .button {
     background-color: #f86565; 
     border: none;
     color: rgb(0, 0, 0);
@@ -215,12 +221,12 @@ a:hover, a:active {
     font-style: normal;
     }
 
-
-.box {
-  display:inline-block;
-  width:15%;
-  height:auto;
-  text-align: center;
-  vertical-align: top;
-  padding: 1%;
+/*boxes for button*/
+  .box {
+    display:inline-block;
+    width:15%;
+    height:auto;
+    text-align: center;
+    vertical-align: top;
+    padding: 1%;
 }

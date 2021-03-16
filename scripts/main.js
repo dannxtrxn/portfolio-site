@@ -1,15 +1,16 @@
-
+/*welcome button*/
 function welcome(){
     let username = prompt("what is your name");
     let message = "Welcome " +username;
     document.getElementById("saywelcome").innerHTML = message;
 }
-
+/*darkmode button*/
 function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
  }
 
+ /*All of my assignment buttons*/
  function comingsoon() {
     alert("Assignment 1 Will Be Coming Soon");}
 
@@ -34,3 +35,5 @@ function myFunction() {
     function comingsoon8() {
     alert("Assignment 8 Will Be Coming Soon");}
 
+
+ 
