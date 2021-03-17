@@ -36,4 +36,20 @@ function myFunction() {
     alert("Assignment 8 Will Be Coming Soon");}
 
 
+    function largerNumbers(){
+        let num1 = parseInt(prompt("Enter the first number: "));
+        let num2 = parseInt(prompt("Enter the first number: "));
+        let output = ""
+        if (num1 > num2){
+            output = num1;
+        } else if (num1 == num2){
+            output = "The numbers entered are equal";
+        } else if (num2 > num1){
+            output = num2;
+        } else{
+        output = "Invalid output";
+        }
+        document.getElementById("largeNum").innerHTML = output;
+    }
  
+   
