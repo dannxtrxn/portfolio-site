@@ -10,12 +10,7 @@ function myFunction() {
     element.classList.toggle("dark-mode");
  }
 
-    function comingsoon7() {
-    alert("Assignment 7 Will Be Coming Soon");}
-
-    function comingsoon8() {
-    alert("Assignment 8 Will Be Coming Soon");}
-
+/*find the large number out of the 2*/
     function largerNumbers(){
         let num1 = parseInt(prompt("Enter the first number: "));
         let num2 = parseInt(prompt("Enter the first number: "));
@@ -31,7 +26,7 @@ function myFunction() {
         }
         document.getElementById("largeNum").innerHTML = output;
     }
- 
+ /*encrypting a message*/
     function encrypt() {
         let plaintext = prompt ("Enter your plain message:");
         let ciphertext = "";
@@ -44,7 +39,7 @@ function myFunction() {
         document.getElementById("encrypted").innerHTML = ciphertext; 
         alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) 
     }
-
+/*decrypts the message*/
     function decrypt() { 
         let ciphertext = prompt ("Enter your encrypted message:"); 
         let plaintext = ""; 
@@ -56,7 +51,7 @@ function myFunction() {
         }
         document.getElementById("decrypted").innerHTML = plaintext; 
     }
-
+/*sorts numbers from least to greatest*/
     function sortNum() {
         var c = parseInt(prompt("Place a number"));
         var b = parseInt(prompt("Place a number"));
@@ -65,9 +60,8 @@ function myFunction() {
     array.sort(function(c, b, a){return b - a});
     alert ("the order from least to greatest is " + array);     
     }
-
+/*finds the last angle*/
     function thirdAngle () {
-    
         let angle1 = parseInt (prompt('Let\'s find the missing angle for a triangle! Enter an angle'));
         let angle2 = parseInt (prompt('Enter a second angle and I\'ll tell you the missing angle!'));
         let totalAngle = angle1 + angle2;
@@ -83,7 +77,7 @@ function myFunction() {
             alert('Please enter valid angles.')
         }
     }
-
+/*tell your the century*/
     function centuryFromYear() {
         let userYear = prompt ('Want to know what century any year is in? Enter a year!', '2020');
         let century = 0;
@@ -94,3 +88,32 @@ function myFunction() {
             return alert ('The year you entered is in the century of ' + century);
 }
 
+/*tell you if the number if there positive or negative*/
+function signOfProduct () {
+    let numSign = parseInt (prompt ('Let\'s find the sign of the product! Enter a number', '0'));
+    let numSign2 =  parseInt (prompt ('Enter another number', '0'));
+    let numSign3 =  parseInt (prompt ('Enter one more number', '0'));
+      if (numSign * numSign2 * numSign3 > 0) {
+          return alert('The sign for the product of ' + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is positive')
+          
+      }
+      else if (numSign * numSign2 * numSign3 < 0) {
+          return alert('The sign for the product of ' + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is negative')
+      }
+      else {
+          return alert ('Please enter 3 integers')
+      }
+  }
+/*tell you if a number is even or odd*/
+function OddOrEven() {
+    let userNum = prompt ('Hey there! Enter an integer');
+    if (userNum % 2 == 1 ){
+    alert('That number is odd!');
+}
+else if(userNum % 2 == 0){
+    alert ('That number is even!');
+}
+    else {
+        alert ('Please enter an integer!');
+    }
+}
