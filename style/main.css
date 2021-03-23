@@ -230,12 +230,3 @@ a:hover, a:active {
     vertical-align: top;
     padding: 1%;
 }
-
-#test{
-  display:inline-block;
-  width:15%;
-  height:auto;
-  text-align: center;
-  vertical-align: top;
-  padding: 1%;
-}
