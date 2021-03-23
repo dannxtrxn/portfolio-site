@@ -82,7 +82,7 @@ function myFunction() {
         let userYear = prompt ('Want to know what century any year is in? Enter a year!', '2020');
         let century = 0;
         century = Math.floor(userYear/100+1);
-            if (toString(century)[-1] == 1) /*&& toString(century)[-1] !=11)*/{ 
+            if (toString(century)[-1] == 1){ 
                century = toString(century) + 'st'
             }
             return alert ('The year you entered is in the century of ' + century);
