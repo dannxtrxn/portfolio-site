@@ -53,13 +53,14 @@ function myFunction() {
     }
 /*sorts numbers from least to greatest*/
     function sortNum() {
-        var c = parseInt(prompt("Place a number"));
-        var b = parseInt(prompt("Place a number"));
         var a = parseInt(prompt("Place a number"));
-    let array = [c, b, a];
+        var b = parseInt(prompt("Place a number"));
+        var c = parseInt(prompt("Place a number"));
+    let array = [a, b, c];
     array.sort(function(c, b, a){return b - a});
     alert ("the order from least to greatest is " + array);     
     }
+
 /*finds the last angle*/
     function thirdAngle () {
         let angle1 = parseInt (prompt('Lets find the missing angle for a triangle! Enter an angle'));
@@ -71,10 +72,10 @@ function myFunction() {
             return alert ('The missing angle is ' + totalAngle);
         }
         else if (totalAngle > 180){
-            return alert('The angles in a triangle only add up to 180. The angles you entered are larger than 180! Please try again!')
+            return alert('The angles in a triangle only add up to 180. The angles you entered are larger than 180! Please try again!');
         }
         else{
-            alert('Please enter valid angles.')
+            alert('Please enter valid angles.');
         }
     }
 /*tell your the century*/
