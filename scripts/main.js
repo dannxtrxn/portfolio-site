@@ -7,7 +7,7 @@ function welcome(){
 /*darkmode button*/
 function myFunction() {
     var element = document.body;
-    element.classList.toggle("dark-mode");
+    element.classList.toggle("dark-mode"); /* this is used for changing the background to black, connected to my main.css*/
  }
 
 /*find the large number out of the 2*/
@@ -15,26 +15,26 @@ function myFunction() {
         let num1 = parseInt(prompt("Enter the first number: "));
         let num2 = parseInt(prompt("Enter the first number: "));
         let output = ""
-        if (num1 > num2){
+        if (num1 > num2){ /*if num1 larger then num2, num 1 will be outputed*/
             output = num1;
-        } else if (num1 == num2){
+        } else if (num1 == num2){ /*if both numbers are equal values it will output that the numbers are equal*/
             output = "The numbers entered are equal";
-        } else if (num2 > num1){
+        } else if (num2 > num1){ /*if num2 is larger than num1 it will be outputed*/
             output = num2;
         } else{
-        output = "Invalid output";
+        output = "Invalid output";/* if you put letters instead of numbers it will output invalid output*/
         }
         document.getElementById("largeNum").innerHTML = output;
     }
  /*encrypting a message*/
     function encrypt() {
         let plaintext = prompt ("Type your message:");
-        let ciphertext = "";
-        plaintext = plaintext.split(" "); 
+        let ciphertext = ""; /* creates a ciphertext*/
+        plaintext = plaintext.split(" "); /* this splits each word into a string*/
         for(let i = 0; i < plaintext.length; i = i + 1) { 
-            firstletter = ((plaintext[i][0]).replace("", "87")).toUpperCase(); 
-            lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "d"); 
-            ciphertext += "aa" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "dt " ; 
+            firstletter = ((plaintext[i][0]).replace("", "77")).toUpperCase(); /*this takes the first letter of your message and turing it uppercase and adding 77 right behind it*/
+            lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "d"); /* this takes the last letters of your message and also turns it uppercase and replaces it will a lowercase d*/
+            ciphertext += "aa" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "dt " ; /* this adds dt front and end of each word*/
         }
         document.getElementById("encrypted").innerHTML = ciphertext; 
         alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) 
@@ -43,10 +43,10 @@ function myFunction() {
     function decrypt() { 
         let ciphertext = prompt ("Paste the message:"); 
         let plaintext = ""; 
-        ciphertext = ciphertext.split(" ");  
-        for(let i = 0; i < ciphertext.length; i = i + 1) { 
-            firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); 
-            lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase(); 
+        ciphertext = ciphertext.split(" "); /* this splits each word into a string*/ 
+        for(let i = 0; i < ciphertext.length; i = i + 1) { /* makes changes to the encrypted message*/
+            firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); /*this take the first letter of your encrypted message turns it lowercase and uses slice to remove the excess*/
+            lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase();  /*this takes the last letter of your encrypted message also making it lowercase and slicing excess*/
             plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
         }
         document.getElementById("decrypted").innerHTML = plaintext; 
@@ -56,8 +56,8 @@ function myFunction() {
         var a = parseInt(prompt("Place a number"));
         var b = parseInt(prompt("Place a number"));
         var c = parseInt(prompt("Place a number"));
-    let array = [a, b, c];
-    array.sort(function(c, b, a){return b - a});
+    let array = [a, b, c];/* letting var A,B,C to let be array*/
+    array.sort(function(c, b, a){return b - a}); /*sorting array in order from least from greatest*/
     alert ("the order from least to greatest is " + array);     
     }
 
@@ -66,27 +66,27 @@ function myFunction() {
         let angle1 = parseInt (prompt('Lets find the missing angle for a triangle! Enter an angle'));
         let angle2 = parseInt (prompt('Enter a second angle and I will tell you the missing angle!'));
         let totalAngle = angle1 + angle2;
-        if (totalAngle < 180){
-            let missingAngle = 180 - totalAngle;
+        if (totalAngle < 180){ /* the number can't add up higher than 180*/
+            let missingAngle = 180 - totalAngle; /* this will add both your numbers together, and subtracting those number to 180 to get the last angle*/
     
             return alert ('The missing angle is ' + totalAngle);
         }
-        else if (totalAngle > 180){
+        else if (totalAngle > 180){ /* if the number is larger than 180 this message will popout*/
             return alert('The angles in a triangle only add up to 180. The angles you entered are larger than 180! Please try again!');
         }
         else{
-            alert('Please enter valid angles.');
+            alert('Please enter valid angles.'); /* not enter a valid will cause this message or putting a letter*/
         }
     }
 /*tell your the century*/
     function centuryFromYear() {
         let userYear = prompt ('Want to know what century any year is in? Enter a year!', '2020');
         let century = 0;
-        century = Math.floor(userYear/100+1);
+        century = Math.floor(userYear/100+1);/*doing the users year divide from 100 and plus 1 will get the users century*/
             if (toString(century)[-1] == 1){ 
                century = toString(century) + 'st'
             }
-            return alert ('The year you entered is in the century of ' + century);
+            return alert ('The year you entered is in the century of ' + century);/* This will should the message of the century you tried finding before*/ 
 }
 
 /*tell you if the number if there positive or negative*/
@@ -94,15 +94,15 @@ function signOfProduct () {
     let numSign = parseInt (prompt ('Lets find the sign of the product! Enter a number', '0'));
     let numSign2 =  parseInt (prompt ('Enter another number', '0'));
     let numSign3 =  parseInt (prompt ('Enter one more number', '0'));
-      if (numSign * numSign2 * numSign3 > 0) {
+      if (numSign * numSign2 * numSign3 > 0) { /* if all your numbers  add up and it's higher than 0 then it will be posititve*/
           return alert('The sign for the product of ' + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is positive')
           
       }
-      else if (numSign * numSign2 * numSign3 < 0) {
+      else if (numSign * numSign2 * numSign3 < 0) { /* if your number dont added up to higher than zero than it will be negative*/
           return alert('The sign for the product of ' + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is negative')
       }
       else {
-          return alert ('Please enter 3 integers')
+          return alert ('Please enter 3 integers')/* message taelling you to put the three numbers in the alert box*/
       }
   }
 /*tell you if a number is even or odd*/
