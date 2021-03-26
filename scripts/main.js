@@ -58,63 +58,66 @@ function myFunction() {
         var c = parseInt(prompt("Place a number"));
     let array = [a, b, c];/* letting var A,B,C to let be array*/
     array.sort(function(c, b, a){return b - a}); /*sorting array in order from least from greatest*/
-    alert ("the order from least to greatest is " + array);     
+    output = "the order from least to greatest is " + array;
+    document.getElementById("sort#").innerHTML = output;
     }
 
 /*finds the last angle*/
-    function thirdAngle () {
-        let angle1 = parseInt (prompt('Lets find the missing angle for a triangle! Enter an angle'));
-        let angle2 = parseInt (prompt('Enter a second angle and I will tell you the missing angle!'));
-        let totalAngle = angle1 + angle2;
-        if (totalAngle < 180){ /* the number can't add up higher than 180*/
-            let missingAngle = 180 - totalAngle; /* this will add both your numbers together, and subtracting those number to 180 to get the last angle*/
-    
-            return alert ('The missing angle is ' + totalAngle);
-        }
-        else if (totalAngle > 180){ /* if the number is larger than 180 this message will popout*/
-            return alert('The angles in a triangle only add up to 180. The angles you entered are larger than 180! Please try again!');
-        }
-        else{
-            alert('Please enter valid angles.'); /* not enter a valid will cause this message or putting a letter*/
-        }
+    function thirdAngle() { 
+            alert ("Let find the last angle to a triangle, please enter 2 angles." );
+        let angle1 = parseInt(prompt("Enter an angle of a triangle")); /*place angle 1*/
+        let angle2 = parseInt(prompt("Enter another angle of a triangle ")); /*place angle 2*/
+        let totalSum = 0;
+            if ((angle1 + angle2) < 180){ /*if the numbers are less than 180 its valid*/
+            totalSum = 180 - (angle1 + angle2); /*if it less than 180 it will add both units you put for your angles and subtract it with 180*/
+        output = "The angle that is missing is, " + totalSum + "."; 
     }
+             else if ((angle1 + angle2) > 180){ 
+        output = "Invalid. Enter two angles of a triangle.";/*if it more than 180/*/
+    }
+        document.getElementById("last angle").innerHTML = output;
+}
 /*tell your the century*/
     function centuryFromYear() {
-        let userYear = prompt ('Want to know what century any year is in? Enter a year!', '2020');
+        let userYear = prompt ("Want to know what century any year is in? Enter a year!", '2020');
         let century = 0;
         century = Math.floor(userYear/100+1);/*doing the users year divide from 100 and plus 1 will get the users century*/
-            if (toString(century)[-1] == 1){ 
-               century = toString(century) + 'st'
-            }
-            return alert ('The year you entered is in the century of ' + century);/* This will should the message of the century you tried finding before*/ 
+            output = "The year you entered is in the century of " + century ;/* This will should the message of the century you tried finding before*/
+            document.getElementById("year").innerHTML = output; 
 }
+
 
 /*tell you if the number if there positive or negative*/
 function signOfProduct () {
-    let numSign = parseInt (prompt ('Lets find the sign of the product! Enter a number', '0'));
-    let numSign2 =  parseInt (prompt ('Enter another number', '0'));
-    let numSign3 =  parseInt (prompt ('Enter one more number', '0'));
+    let numSign = parseInt (prompt ("Lets find the sign of the product! Enter a number", "0"));
+    let numSign2 =  parseInt (prompt ("Enter another number", "0"));
+    let numSign3 =  parseInt (prompt ("Enter one more number", "0"));
       if (numSign * numSign2 * numSign3 > 0) { /* if all your numbers  add up and it's higher than 0 then it will be posititve*/
-          return alert('The sign for the product of ' + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is positive')
+          output = "The sign for the product of " + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is positive';
           
       }
       else if (numSign * numSign2 * numSign3 < 0) { /* if your number dont added up to higher than zero than it will be negative*/
-          return alert('The sign for the product of ' + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is negative')
+          output = "The sign for the product of " + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is negative';
       }
       else {
-          return alert ('Please enter 3 integers')/* message taelling you to put the three numbers in the alert box*/
+          output = "Please enter 3 integers";/* message taelling you to put the three numbers in the alert box*/
       }
+      document.getElementById("product").innerHTML = output
   }
 /*tell you if a number is even or odd*/
 function OddOrEven() {
-    let userNum = prompt ('Enter an integer');
+    let userNum = prompt ("Enter an integer");
     if (userNum % 2 == 1 ){
-    alert('That number is odd!');
+    output = "That number is odd!";
 }
 else if(userNum % 2 == 0){
-    alert ('That number is even!');
+    output = "That number is even!";
 }
     else {
-        alert ('Please enter an integer!');
+        output = "Please enter an integer!";
     }
+    document.getElementById("1or2").innerHTML = output
 }
+
+
+    
