@@ -27,18 +27,21 @@ function myFunction() {
         document.getElementById("largeNum").innerHTML = output;
     }
  /*encrypting a message*/
-    function encrypt() {
-        let plaintext = prompt ("Type your message:");
-        let ciphertext = ""; /* creates a ciphertext*/
-        plaintext = plaintext.split(" "); /* this splits each word into a string*/
-        for(let i = 0; i < plaintext.length; i = i + 1) { 
-            firstletter = ((plaintext[i][0]).replace("", "77")).toUpperCase(); /*this takes the first letter of your message and turing it uppercase and adding 77 right behind it*/
-            lastletter = (((plaintext[i]).slice(-1)).toUpperCase()).replace("", "d"); /* this takes the last letters of your message and also turns it uppercase and replaces it will a lowercase d*/
-            ciphertext += "aa" + (plaintext[i]).slice(1, -1) + firstletter + lastletter + "dt " ; /* this adds dt front and end of each word*/
-        }
-        document.getElementById("encrypted").innerHTML = ciphertext; 
-        alert("Copy this encrypted message and paste on decrypt button! " + ciphertext) 
+ function encryptor() {
+    let plaintext = prompt('Enter plain message')
+    let ciphertext = '';
+    let wordList = plaintext.split(" ");
+    for(let i = 0; i < wordList.length; i = i + 1) {
+
+    if (wordList[i].length >3) {
+        ciphertext += ciphertext + wordList[i].slice(1) + wordList[i][0].replace("","aBk") + wordList[i][0] + 'fTc';
+    } else {
+        ciphertext = ciphertext + wordList[i]
     }
+    document.getElementById("encrypted").innerHTML = ciphertext;
+}
+ }
+ 
 /*decrypts the message*/
     function decrypt() { 
         let ciphertext = prompt ("Paste the message:"); 
@@ -120,4 +123,4 @@ else if(userNum % 2 == 0){
 }
 
 
-    
+
