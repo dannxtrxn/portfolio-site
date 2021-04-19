@@ -32,7 +32,7 @@ function myFunction() {
     let ciphertext = "";
     plaintext = plaintext.split(" "); 
     for(let i = 0; i < plaintext.length; i++){
-        if(plaintext[i].length >= 2){
+        if(plaintext[i].length >= 3){
             let firstletter = plaintext[i][0]; 
             let secondletter = plaintext[i][1] 
                 ciphertext += 'fTc' + (plaintext[i]).slice(1) + 'SsB' + secondletter + firstletter + "7" + ' ' //puts fTc in from of the word then adds SsB to the end of the word and add 7 at the very end of the encryped message
