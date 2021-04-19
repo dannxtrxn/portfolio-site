@@ -11,7 +11,7 @@ function myFunction() {
  }
 
 /*find the large number out of the 2*/
-    function largerNumbers(){
+    function largerNum(){
         let num1 = parseInt(prompt("Enter the first number: "));
         let num2 = parseInt(prompt("Enter the first number: "));
         let output = ""
@@ -26,34 +26,47 @@ function myFunction() {
         }
         document.getElementById("largeNum").innerHTML = output;
     }
- /*encrypting a message*/
- function encryptor() {
-    let plaintext = prompt('Enter plain message')
-    let ciphertext = '';
-    let wordList = plaintext.split(" ");
-    for(let i = 0; i < wordList.length; i = i + 1) {
-
-    if (wordList[i].length >3) {
-        ciphertext += ciphertext + wordList[i].slice(1) + wordList[i][0].replace("","aBk") + wordList[i][0] + 'fTc';
-    } else {
-        ciphertext = ciphertext + wordList[i]
-    }
-    document.getElementById("encrypted").innerHTML = ciphertext;
-}
- }
- 
-/*decrypts the message*/
-    function decrypt() { 
-        let ciphertext = prompt ("Paste the message:"); 
-        let plaintext = ""; 
-        ciphertext = ciphertext.split(" "); /* this splits each word into a string*/ 
-        for(let i = 0; i < ciphertext.length; i = i + 1) { /* makes changes to the encrypted message*/
-            firstletter = ((ciphertext[i]).slice(-5, -4)).toLowerCase(); /*this take the first letter of your encrypted message turns it lowercase and uses slice to remove the excess*/
-            lastletter = ((ciphertext[i]).slice(-3, -2)).toLowerCase();  /*this takes the last letter of your encrypted message also making it lowercase and slicing excess*/
-            plaintext += firstletter + (ciphertext[i]).slice(2,-7) + lastletter + " "; 
+//encrypt the message of your choice 
+ function encrypt(){
+    let plaintext = prompt('Enter your Message');
+    let ciphertext = "";
+    plaintext = plaintext.split(" "); 
+    for(let i = 0; i < plaintext.length; i++){
+        if(plaintext[i].length >= 2){
+            let firstletter = plaintext[i][0]; 
+            let secondletter = plaintext[i][1] 
+                ciphertext += 'fTc' + (plaintext[i]).slice(1) + 'SsB' + secondletter + firstletter + "7" + ' ' //puts fTc in from of the word then adds SsB to the end of the word and add 7 at the very end of the encryped message
+                }
+                alert(ciphertext);}
+                {
+                document.getElementById(encrypt).innerHTML = output 
+            }
+            }
+//decrypts the encrypted message
+//got help from kevin to solve this function 
+function decrypt(){
+    let ciphertext = prompt("Enter your Encrypted Message")
+    let decryptedtext = ''; 
+    let firstDecrypt = ''; 
+    let restOfText = ''; 
+    
+    ciphertext = ciphertext.split(" "); 
+    for(let i = 0; i < ciphertext.length; i = i + 1){
+        ciphertext[i] = ciphertext[i].replace(/SsB/g, ""); //the g is there to remove all the SsB in the encrtpyed message
+        ciphertext[i] = ciphertext[i].replace(/fTc/g, ""); //the g is there to remove all the fTc in the encrtpyed message
+        ciphertext[i] = ciphertext[i].replace(/7/g, ""); //the g is there to remove all the 7 in the encrtpyed message
+            if(ciphertext[i].length > 2){
+     firstDecrypt = ciphertext[i].slice(-1);
+     restOfText =  (ciphertext[i]).slice(0, -2);
+    decryptedtext += firstDecrypt + restOfText + ' ';
         }
-        document.getElementById("decrypted").innerHTML = plaintext; 
+        else {
+            decryptedtext += ciphertext[i][0] + " ";
+            }
     }
+    alert('Your Message is, ' +  decryptedtext)
+    }
+    
 /*sorts numbers from least to greatest*/
     function sortNum() {
         var a = parseInt(prompt("Place a number"));
@@ -66,21 +79,22 @@ function myFunction() {
     }
 
 /*finds the last angle*/
-    function thirdAngle() { 
+    function thirdangle() { 
             alert ("Let find the last angle to a triangle, please enter 2 angles." );
-        let angle1 = parseInt(prompt("Enter an angle of a triangle")); /*place angle 1*/
-        let angle2 = parseInt(prompt("Enter another angle of a triangle ")); /*place angle 2*/
+        let a1 = parseInt(prompt("Enter an angle of a triangle")); /*place angle 1*/
+        let a2 = parseInt(prompt("Enter another angle of a triangle ")); /*place angle 2*/
         let totalSum = 0;
-            if ((angle1 + angle2) < 180){ /*if the numbers are less than 180 its valid*/
-            totalSum = 180 - (angle1 + angle2); /*if it less than 180 it will add both units you put for your angles and subtract it with 180*/
+            if ((a1 + a2) < 180){ /*if the numbers are less than 180 its valid*/
+            totalSum = 180 - (a1 + a2); /*if it less than 180 it will add both units you put for your angles and subtract it with 180*/
         output = "The angle that is missing is, " + totalSum + "."; 
     }
              else if ((angle1 + angle2) > 180){ 
         output = "Invalid. Enter two angles of a triangle.";/*if it more than 180/*/
     }
-        document.getElementById("last angle").innerHTML = output;
+        document.getElementById("3angle").innerHTML = output;
 }
 /*tell your the century*/
+//worked together with kevin and travis also used w3school
     function centuryFromYear() {
         let userYear = prompt ("Want to know what century any year is in? Enter a year!", '2020');
         let century = 0;
@@ -91,16 +105,16 @@ function myFunction() {
 
 
 /*tell you if the number if there positive or negative*/
-function signOfProduct () {
-    let numSign = parseInt (prompt ("Lets find the sign of the product! Enter a number", "0"));
-    let numSign2 =  parseInt (prompt ("Enter another number", "0"));
-    let numSign3 =  parseInt (prompt ("Enter one more number", "0"));
+function signofproduct () {
+    let numS = parseInt (prompt ("Lets find the sign of the product! Enter a number", "0"));
+    let numS2 =  parseInt (prompt ("Enter another number", "0"));
+    let numS3 =  parseInt (prompt ("Enter one more number", "0"));
       if (numSign * numSign2 * numSign3 > 0) { /* if all your numbers  add up and it's higher than 0 then it will be posititve*/
           output = "The sign for the product of " + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is positive';
           
       }
-      else if (numSign * numSign2 * numSign3 < 0) { /* if your number dont added up to higher than zero than it will be negative*/
-          output = "The sign for the product of " + numSign + ' ,' + numSign2 +' and ' + numSign3 + ' is negative';
+      else if (numS * numS2 * numSS3 < 0) { /* if your number dont added up to higher than zero than it will be negative*/
+          output = "The sign for the product of " + numS + ' ,' + numS2 +' and ' + numS3 + ' is negative';
       }
       else {
           output = "Please enter 3 integers";/* message taelling you to put the three numbers in the alert box*/
@@ -108,7 +122,7 @@ function signOfProduct () {
       document.getElementById("product").innerHTML = output
   }
 /*tell you if a number is even or odd*/
-function OddOrEven() {
+function oddoreven() {
     let userNum = prompt ("Enter an integer");
     if (userNum % 2 == 1 ){
     output = "That number is odd!";
