@@ -32,7 +32,7 @@ function myFunction() {
     let ciphertext = "";
     plaintext = plaintext.split(" "); 
     for(let i = 0; i < plaintext.length; i++){
-        if(plaintext[i].length >= 3){
+        if(plaintext[i].length >= 2){
             let firstletter = plaintext[i][0]; 
             let secondletter = plaintext[i][1] 
                 ciphertext += 'fTc' + (plaintext[i]).slice(1) + 'SsB' + secondletter + firstletter + "7" + ' ' //puts fTc in from of the word then adds SsB to the end of the word and add 7 at the very end of the encryped message
@@ -40,6 +40,7 @@ function myFunction() {
                 alert(ciphertext);}
                 {
                 document.getElementById(encrypt).innerHTML = output 
+                // to make this function type in your message open a new tab then go back to the website, then it will show you your entire encrypted message
             }
             }
 //decrypts the encrypted message
@@ -47,8 +48,8 @@ function myFunction() {
 function decrypt(){
     let ciphertext = prompt("Enter your Encrypted Message")
     let decryptedtext = ''; 
-    let firstDecrypt = ''; 
-    let restOfText = ''; 
+    let firstDecryption = ''; 
+    let wholetext = ''; 
     
     ciphertext = ciphertext.split(" "); 
     for(let i = 0; i < ciphertext.length; i = i + 1){
@@ -56,15 +57,16 @@ function decrypt(){
         ciphertext[i] = ciphertext[i].replace(/fTc/g, ""); //the g is there to remove all the fTc in the encrtpyed message
         ciphertext[i] = ciphertext[i].replace(/7/g, ""); //the g is there to remove all the 7 in the encrtpyed message
             if(ciphertext[i].length > 2){
-     firstDecrypt = ciphertext[i].slice(-1);
-     restOfText =  (ciphertext[i]).slice(0, -2);
-    decryptedtext += firstDecrypt + restOfText + ' ';
+    firstDecryption = ciphertext[i].slice(-1);
+    wholetext =  (ciphertext[i]).slice(0, -2);
+    decryptedtext += firstDecryption + wholetext + ' ';
         }
         else {
             decryptedtext += ciphertext[i][0] + " ";
             }
     }
     alert('Your Message is, ' +  decryptedtext)
+    document.getElementById(decrypt).innerHTML = output 
     }
     
 /*sorts numbers from least to greatest*/
